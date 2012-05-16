@@ -1,5 +1,10 @@
 package test;
 
+import javax.swing.*;
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
+
+
 /**
  * Created by IntelliJ IDEA.
  * User: zzhang
@@ -8,9 +13,15 @@ package test;
  * To change this template use File | Settings | File Templates.
  */
 
-public class HelloWorld {
+public class HelloWorld{
+
+    static Logger logger = Logger.getLogger(HelloWorld.class);
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		JOptionPane.showMessageDialog(null, "Hello Zack!");
+        BasicConfigurator.configure();
+        logger.info("Hello World");
 		System.out.println("Hello Zack!!");
 	}
 }
